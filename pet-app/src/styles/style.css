@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+h1 {
+    /* импортировать шрифты */
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+}
+
+p {
+    color: #172B4D;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.div-card {
+    background-color: #ffffff;
+    display: flex;
+    place-content: center;
+    height: 282px;
+    width: 330px;
+    /* закругление немножко отличается на боковых стенках */
+    border-radius: 9px;
+    border-bottom: solid 4px #B2B8C4;
+}
+
+.div-container-card {
+    width: 94%;
+    /* хули высота не настраивается???? */
+    /* потому что самый верхний элемент на странице */
+    height: 90%;
+    padding: 3.1% 0;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.div-at-a-glance {
+    height: 22px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-more-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+}
+
+.div-due-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+    height: 24px;
+    flex-shrink: 0;
+    background-color: rgb(158, 234, 209);
+}
+
+.p-date {
+    color: #6D798E;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.div-assigned-to {
+    display: flex;
+}
+
+.profile1 {
+    position: relative;
+    left: 19px;
+    z-index: 0;
+}
+
+.profile2 {
+    position: relative;
+    left: 3px;
+    z-index: 1;
+}
+
+.div-progress {
+    /* сделать чтобы передавалась цифра-переменная и длина бара изменялась */
+    width: 100%;
+    background-color: #02C39A;
+    height: 10px;
+}
