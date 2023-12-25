@@ -35,26 +35,22 @@ p {
     justify-content: center;
 }
 
-.div-card {
+.div-container-card {
     background-color: #ffffff;
     display: flex;
+    flex-direction: column;
     place-content: center;
     height: 282px;
     width: 330px;
     /* закругление немножко отличается на боковых стенках */
     border-radius: 9px;
     border-bottom: solid 4px #B2B8C4;
-    margin: 10px;
-}
-
-.div-container-card {
+    margin: 20px 0;
+    padding:10px;
     width: 94%;
     /* хули высота не настраивается???? */
     /* потому что самый верхний элемент на странице */
-    height: 93%;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 
 }
@@ -136,4 +132,13 @@ p {
     height: 10px;
     height: 6px;
     border-radius: 4px;
+}
+.div-container-note {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    border-radius: 9px;
+    margin: 20px 0;
+    padding: 10px;
 }

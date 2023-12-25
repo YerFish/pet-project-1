@@ -17,6 +17,8 @@ const tasks = [
     profile2:
       "https://w.forfun.com/fetch/d9/d9b916b8d04c6bae50b1c0e38ec14cc3.jpeg",
     progress: ".",
+    notehead: "Add a quick note. Or create a simple list:",
+    listel: "Cake",
     id: 0,
   },
   // таких массивов скока хочешь можно сделать
@@ -28,7 +30,6 @@ const tasks = [
     date: "June 02, 2023",
     profile1: profile_1,
     profile2: profile_2,
-    progress: ".",
     id: 1,
   },
 ];
@@ -38,7 +39,7 @@ export function Task() {
     <>
       {tasks.map((task) => {
         return (
-          <div key={task.id} className="div-card">
+          <div className="container"  key={task.id}>
             <div className="div-container-card">
               <img src={task.img} className="img-top" alt="top" />
               <div className="div-at-a-glance">
@@ -68,11 +69,16 @@ export function Task() {
                   />
                 </div>
               </div>
-
               <div className="div-progress">
                 {/* убрать точку когда закончу прогресс бар */}
                 <p>{task.progress}</p>
               </div>
+            </div>
+          <div className="div-container-note">
+              <p>{task.notehead}</p>
+              <ul className="list">
+                <li className="list-element">{task.listel}</li>
+              </ul>
             </div>
           </div>
         );
