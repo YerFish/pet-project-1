@@ -8,16 +8,31 @@ import profile_2 from "../img/profile_02.svg";
 const tasks = [
   {
     img: image_top,
-    title: "Task Title",
+    title: "Task title",
     emoji: emoji_reaction,
     description: "Add a short description or link a web page.",
     date: "Jan 01, 2021",
-    profile1: profile_1,
-    profile2: profile_2,
-    progress: 100,
+    profile1:
+      "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663103492_54-mykaleidoscope-ru-p-eiforiya-oboi-emotsii-64.jpg",
+    profile2:
+      "https://w.forfun.com/fetch/d9/d9b916b8d04c6bae50b1c0e38ec14cc3.jpeg",
+    progress: ".",
     id: 0,
   },
+  // таких массивов скока хочешь можно сделать
+  {
+    img: "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663103492_54-mykaleidoscope-ru-p-eiforiya-oboi-emotsii-64.jpg",
+    title: "Task title 2",
+    emoji: emoji_reaction,
+    description: "This is a short description or link a web page.",
+    date: "June 02, 2023",
+    profile1: profile_1,
+    profile2: profile_2,
+    progress: ".",
+    id: 1,
+  },
 ];
+
 export function Task() {
   return (
     <>
@@ -25,15 +40,19 @@ export function Task() {
         return (
           <div key={task.id} className="div-card">
             <div className="div-container-card">
-              <img src={task.img} alt="top" />
+              <img src={task.img} className="img-top" alt="top" />
               <div className="div-at-a-glance">
                 <h1>{task.title}</h1>
                 <img src={task.emoji} className="emoji" alt="emoji" />
               </div>
-              <p>{task.description}</p>
+              <p className="p-class-description">{task.description}</p>
               <div className="div-more-info">
                 <div className="div-due-date">
-                  <img src={calendar} alt="calendar icon" />
+                  <img
+                    src={calendar}
+                    className="img-calendar"
+                    alt="calendar icon"
+                  />
                   <p className="p-date">{task.date}</p>
                 </div>
                 <div className="div-assigned-to">
@@ -51,7 +70,8 @@ export function Task() {
               </div>
 
               <div className="div-progress">
-                <p>*progress bar {task.progress}* </p>
+                {/* убрать точку когда закончу прогресс бар */}
+                <p>{task.progress}</p>
               </div>
             </div>
           </div>
